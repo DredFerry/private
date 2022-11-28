@@ -1,0 +1,35 @@
+<div class="wContainer">
+    <div class="heading">NOKIA</div>
+    <div class="subHeading">FACILIVISS</div>
+    <div class="inputForm">
+        <form action=""  [formGroup]="registrationForm" (ngSubmit)="OnSubmit()">
+          <div class="email">
+            <fa-icon [icon]="faUser"></fa-icon>
+            <label for="" id="label1">Email</label>
+            <input [class.is-invalid]="email?.invalid && email?.touched" formControlName="email" type="email"  placeholder="Email"  (input)="clicked1()">
+            <div *ngIf="email?.invalid && email?.touched">
+            <small class="text-danger" *ngIf="email?.errors?.['required']">Email is required</small>
+            <small class="text-danger" *ngIf="email?.errors?.['pattern']">Valid Email is required</small>
+            </div>
+          </div>
+          <div class="password">
+            <fa-icon [icon]="faLock"></fa-icon>
+            
+            <label for="" id="label2">Password</label>
+           <input [class.is-invalid]="password?.invalid && password?.touched" formControlName="password" [type]="show? 'text':'password'" id="password" placeholder="Password" (input)="clicked2()"  >
+           <div class="eye">
+            <fa-icon id="activeEye"  class="commonEye" [icon]="faEye" (click)="passVisible()">{{show ? 'Show':'Hide'}}</fa-icon>
+            <fa-icon id="deactiveEye" class="commonEye" [icon]="faEyeSlash" (click)="passNotVisible()"></fa-icon>
+            </div>
+            <div *ngIf="password?.invalid && password?.touched">
+            <small class="text-danger" *ngIf="password?.errors?.['required']">Password is required</small>
+            <small class="text-danger" *ngIf="password?.errors?.['minlength']">Password should be minimum 6 charecters</small>
+            </div>
+          </div>
+
+          <div class="forgotPass"><a href="">Forgot Password ?</a></div>
+          <button type="submit" [disabled]='!registrationForm.valid'>Submit</button>
+        </form>
+    </div>
+  </div>
+

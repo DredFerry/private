@@ -1,0 +1,114 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Play:wght@700&display=swap');
+
+/* utility */
+.text-danger{
+    color:red;
+}
+.is-invalid{
+    border:2px solid red
+}
+fa-icon{
+    position: relative;
+    top: 52%;
+    left: 2%;
+    display: block;
+    width: 5%;
+}
+.eye{
+    position: relative;
+    bottom: 40%;
+    left: 85%;
+    width: 10%;  
+}
+.commonEye{
+    top: 0;
+    left: 50%;
+    height: 0
+}
+#deactiveEye{
+    visibility: hidden;
+}
+/* .userIcon{
+    background: url("https://assets.stickpng.com/images/585e4bf3cb11b227491c339a.png") no-repeat left;
+    background-size:20px ;
+} */
+/* main  */
+.wContainer{
+    height: 70vh;
+    width: 30vw;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3vh 0;
+}
+.heading{
+    font-weight: bolder;
+    color: #183592;
+    margin: 2vh 0 0 0;
+    font-size: 3rem;
+    font-family: 'Play', sans-serif;
+}
+.subHeading{
+    margin: 3vh;
+    font-size: 2rem;
+    font-family: 'Open Sans', sans-serif;
+
+    
+}
+.inputForm{
+    height: 100%;
+    width: 90%;
+}
+form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+label{
+    visibility: hidden;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    background-color: white;
+    transition:all .3s ease-in-out;
+}
+
+.email,.password{
+    height: 15vh;
+}
+
+input{
+    font-size: 1rem;
+    padding: 0 10%;
+    width: 80%;
+    height:50%;
+    border-radius: 3px;
+    border: 1px solid rgb(172, 172, 172)
+}
+small{
+    text-align: left;
+}
+.forgotPass{
+    text-align: end;
+}
+.forgotPass a{
+    color: black;
+    text-decoration: none;
+    font-size: 0.89rem;
+
+}
+button{
+    margin: 10% 0 0 0 ;
+    height: 15%;
+    background-color: #183592;
+    border: none;
+    border-radius: 3px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+button:enabled{
+    color: white;
+
+}
